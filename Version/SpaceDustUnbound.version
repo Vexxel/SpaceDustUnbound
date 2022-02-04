@@ -1,0 +1,34 @@
+{
+	"NAME":"SpaceDustUnbound",
+	"DOWNLOAD":
+	"https://github.com/Vexxel/SpaceDustUnbound/releases",
+	"URL":
+	" ",
+	"CHANGE_LOG_URL":" ",
+	"GITHUB":
+	{
+		"USERNAME":"Vexxel",
+		"REPOSITORY":"https://github.com/Vexxel/SpaceDustBunnies",
+		"ALLOW_PRE_RELEASE":true
+	},
+	"VERSION":
+	{
+		"MAJOR":1,
+		"MINOR":0,
+		"PATCH":0,
+		"BUILD":0
+	},
+	"KSP_VERSION":
+	{
+		"MAJOR":1,
+		"MINOR":12,
+		"PATCH":3
+	},
+	"INSTALL_LOC":
+	{
+		"NAME": "SpaceDustUnbound",
+		"PATH": "",
+		"DIRECTORY": "SpaceDustUnbound/Version/",
+		"FILE": "SpaceDustUnbound.version"
+	}
+}
