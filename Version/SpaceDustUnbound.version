@@ -4,7 +4,7 @@
 	"https://github.com/Vexxel/SpaceDustUnbound/releases",
 	"URL":
 	"https://github.com/Vexxel/SpaceDustUnbound/blob/main/Version/SpaceDustUnbound.version",
-	"CHANGE_LOG_URL":"https://raw.githubusercontent.com/Vexxel/SpaceDustUnbound/Version/Changelog.md",
+	"CHANGE_LOG_URL":"https://raw.githubusercontent.com/Vexxel/SpaceDustUnbound/main/Version/Changelog.md",
 	"GITHUB":
 	{
 		"USERNAME":"Vexxel",
