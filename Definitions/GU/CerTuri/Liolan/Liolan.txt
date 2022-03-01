@@ -1,10 +1,10 @@
 SPACEDUST_RESOURCE:NEEDS[SpaceDust&GU/_Systems/_TauCeti]
 {
   resourceName = Antimatter
-  body = Mare
+  body = Liolan
   RESOURCEBAND
   {
-    name = laytheRing
+    name = liolanRing
     title = #LOC_SpaceDust_Band_LowBelt
 
     // Discoverability Data
@@ -14,8 +14,9 @@ SPACEDUST_RESOURCE:NEEDS[SpaceDust&GU/_Systems/_TauCeti]
 
     // Maximum and minimum abundances (variation is by game seed)
     // In t/m^3
-    minAbundance = 0.0000000000000000000000000000062
-    maxAbundance = 0.0000000000000000000000000000078
+       minAbundance = 2.1E-28
+       maxAbundance = 4.2E-28
+
 
     // Scale abundances by air density
     useAirDensity = False
@@ -26,11 +27,11 @@ SPACEDUST_RESOURCE:NEEDS[SpaceDust&GU/_Systems/_TauCeti]
     // -------
     // Altitudes are in km from sea level
     // Maximum altitude for a distribution
-    altUpperBound = 1800000
+    altUpperBound = 650000
     // minimum altitude for a distribution
-    altLowerBound = 400000
+    altLowerBound = 580000
     // peak of a distribution
-    altPeak = 750000
+    altPeak = 610000
     // maximum variation of these altitudes (variation is by game seed)
     altVariability = 10
     // Falloff for altitude, can be Linear or None
@@ -38,9 +39,9 @@ SPACEDUST_RESOURCE:NEEDS[SpaceDust&GU/_Systems/_TauCeti]
     altitudeSquish = 0.9
     // lats in degrees
     // Maximum latitude for a distribution
-    latUpperBound = 35
+    latUpperBound = 25
     // Minimum latitude for a distribution
-    latLowerBound = -35
+    latLowerBound = -25
     // peak of a distribution
     latPeak = 0
     // maximum variation of these latitudes (variation is by game seed)
@@ -48,335 +49,153 @@ SPACEDUST_RESOURCE:NEEDS[SpaceDust&GU/_Systems/_TauCeti]
     // Falloff for latitude, can be Linear or None
     latFalloffType = Linear
   }
+
+  RESOURCEBAND
+  {
+    name = safarAreaRing
+
+    title = #LOC_SpaceDust_Band_Ring
+
+    // Maximum and minimum abundances (variation is by game seed)
+    // In t/m^3
+    minAbundance = 1.2E-28
+	maxAbundance = 3.8E-27
+
+     // Visuals Data
+    // -------------
+    countScale = 15
+    rotateRate = 0.25
+
+    // Discoverability Data
+    // --------------
+    alwaysDiscovered = false
+    alwaysIdentified = false
+
+    // Scale abundances by air density
+    useAirDensity = False
+    // Distribution model to use, can be Uniform or Spherical
+    distributionType = Spherical
+
+    // These parameters are specific to the Spherical model
+    // -------
+    // Altitudes are in km from sea level
+    // Maximum altitude for a distribution
+    altUpperBound = 15000000
+    // minimum altitude for a distribution
+    altLowerBound = 13000000
+    // peak of a distribution
+    altPeak = 14000000
+    // maximum variation of these altitudes (variation is by game seed)
+    altVariability = 0
+    // Falloff for altitude, can be Linear or None
+    altFalloffType = Linear
+
+    // lats in degrees
+    // Maximum latitude for a distribution
+    latUpperBound = 3
+    // Minimum latitude for a distribution
+    latLowerBound = -3
+    // peak of a distribution
+    latPeak = 0
+    // maximum variation of these latitudes (variation is by game seed)
+    latVariability = 0
+    // Falloff for latitude, can be Linear or None
+    latFalloffType = None
+  }
+
 }
 
 SPACEDUST_RESOURCE:NEEDS[SpaceDust&GU/_Systems/_TauCeti]
 {
-	resourceName = LqdNitrogen
-	body = Mare
+	resourceName = LqdCO2
+	body = Liolan
 
 	RESOURCEBAND
 	{
-		name = mareAtmo
+		name = liolanAtmo
 		title = #LOC_SpaceDust_Band_Atmosphere
 
+		minAbundance = 3.101
+		maxAbundance = 3.198
+
 		// Discoverability Data
-		// --------------
 		alwaysDiscovered = false
 		alwaysIdentified = false
 
-		// Abundance Data
-		// --------------
-		// Maximum and minimum abundances (variation is by game seed)
-		// In t/m^3
-		minAbundance = 1.3547
-		maxAbundance = 1.4958
-
-		// Scale abundances by air density
-		useAirDensity = True
-		// 
+		useAirDensity = true
 		densityCurve
 		{
 			key = 0 0
 			key = 1 1
 			key = 12 12
 		}
-
-		// Distribution Data
-		// --------------
-
-		// Distribution model to use, can be Uniform or Spherical
 		distributionType = Spherical
 
 		// These parameters are specific to the Spherical model
-		// -------
-		// Altitudes are in km from sea level
-		// Maximum altitude for a distribution
-		altUpperBound = 50000
-		// minimum altitude for a distribution
+		altUpperBound = 150000
 		altLowerBound = -500
-		// peak of a distribution
 		altPeak = 0
-		// maximum variation of these altitudes (variation is by game seed)
 		altVariability = 0
-		// Falloff for altitude, can be Linear or None
 		altFalloffType = Linear
 
-		// lats in degrees
-		// Maximum latitude for a distribution
 		latUpperBound = 90
-		// Minimum latitude for a distribution
 		latLowerBound = -90
-		// peak of a distribution
 		latPeak = 0
-		// maximum variation of these latitudes (variation is by game seed)
 		latVariability = 0
-		// Falloff for latitude, can be Linear or None
 		latFalloffType = None
 	}
+}
+
+SPACEDUST_RESOURCE:NEEDS[SpaceDust&GU/_Systems/_TauCeti]
+{
+	resourceName = LqdNitrogen
+	body = Liolan
+
 	RESOURCEBAND
 	{
-		name = mareExo
-		title = #LOC_SpaceDust_Band_Exosphere
+		name = liolanAtmo
+		title = #LOC_SpaceDust_Band_Atmosphere
 
-		// Discoverability Data
-		// --------------
 		alwaysDiscovered = false
 		alwaysIdentified = false
 
-		// Abundance Data
-		// --------------
-		// Maximum and minimum abundances (variation is by game seed)
-		// In t/m^3
-		minAbundance = 0.00000135
-		maxAbundance = 0.00000159
-
-		// Scale abundances by air density
-		useAirDensity = False
-
+		minAbundance = 0.115 // 2
+		maxAbundance = 0.1825 // 5
+		
+		useAirDensity = True
+		densityCurve
+		{
+			key = 0 0
+			key = 1 1
+			key = 12 12
+		}
 		// Distribution Data
-		// --------------
-
-		// Distribution model to use, can be Uniform or Spherical
 		distributionType = Spherical
 
 		// These parameters are specific to the Spherical model
-		// -------
-		// Altitudes are in km from sea level
-		// Maximum altitude for a distribution
-		altUpperBound = 4000000
-		// minimum altitude for a distribution
-		altLowerBound = 50000
-		// peak of a distribution
-		altPeak = 100000
-		// maximum variation of these altitudes (variation is by game seed)
+		altUpperBound = 150000
+		altLowerBound = -500
+		altPeak = 0
 		altVariability = 0
-		// Falloff for altitude, can be Linear or None
 		altFalloffType = Linear
 
 		// lats in degrees
-		// Maximum latitude for a distribution
-		latUpperBound = 90
-		// Minimum latitude for a distribution
-		latLowerBound = -90
-		// peak of a distribution
-		latPeak = 0
-		// maximum variation of these latitudes (variation is by game seed)
-		latVariability = 0
-		// Falloff for latitude, can be Linear or None
-		latFalloffType = None
-	}
-}
-
-SPACEDUST_RESOURCE:NEEDS[SpaceDust&GU/_Systems/_TauCeti]
-{
-	resourceName = Water
-	body = Mare
-
-	RESOURCEBAND
-	{
-		name = mareAtmo
-		title = #LOC_SpaceDust_Band_LowAtmosphere
-
-		minAbundance = 0.000701
-		maxAbundance = 0.000715
-
-		// Discoverability Data
-		alwaysDiscovered = false
-		alwaysIdentified = false
-
-		useAirDensity = False
-		distributionType = Spherical
-
-		// These parameters are specific to the Spherical model
-		altUpperBound = 8000
-		altLowerBound = -500
-		altPeak = 5000
-		altVariability = 0
-		altFalloffType = Linear
-
 		latUpperBound = 90
 		latLowerBound = -90
 		latPeak = 0
 		latVariability = 0
 		latFalloffType = None
 	}
-}
-
-SPACEDUST_RESOURCE:NEEDS[SpaceDust&GU/_Systems/_TauCeti]
-{
-	resourceName = LqdCO2
-	body = Mare
-
-	RESOURCEBAND
-	{
-		name = mareAtmo
-
-		minAbundance = 0.000009
-		maxAbundance = 0.000014
-		title = #LOC_SpaceDust_Band_LowAtmosphere
-
-		// Discoverability Data
-		alwaysDiscovered = false
-		alwaysIdentified = false
-
-		useAirDensity = False
-		distributionType = Spherical
-
-		// These parameters are specific to the Spherical model
-		altUpperBound = 10000
-		altLowerBound = -500
-		altPeak = 5500
-		altVariability = 0
-		altFalloffType = Linear
-
-		latUpperBound = 90
-		latLowerBound = -90
-		latPeak = 0
-		latVariability = 0
-		latFalloffType = None
-	}
-}
-
-SPACEDUST_RESOURCE:NEEDS[SpaceDust&GU/_Systems/_TauCeti]
-{
-  resourceName = XenonGas
-  body = Mare
-
-
-  RESOURCEBAND
-  {
-    name = mareAtmo
-    title = #LOC_SpaceDust_Band_Atmosphere
-    // Maximum and minimum abundances (variation is by game seed)
-    // In t/m^3
-    minAbundance = 0.000000000620
-    maxAbundance = 0.000000000780
-
-
-    
-    // Discoverability Data
-    // --------------
-    alwaysDiscovered = false
-    alwaysIdentified = false
-
-    
-    // Scale abundances by air density
-    useAirDensity = True
-    // Map air density to scaling factors
-    densityCurve
-    {
-        key = 0 0
-        key = 1 1
-        key = 12 12
-    }
-    // Distribution model to use, can be Uniform or Spherical
-    distributionType = Spherical
-
-    // These parameters are specific to the Spherical model
-    // -------
-    // Altitudes are in km from sea level
-    // Maximum altitude for a distribution
-    altUpperBound = 50000
-    // minimum altitude for a distribution
-    altLowerBound = 0
-    // peak of a distribution
-    altPeak = 0
-    // maximum variation of these altitudes (variation is by game seed)
-    altVariability = 0
-    // Falloff for altitude, can be Linear or None
-    altFalloffType = Linear
-
-    // lats in degrees
-    // Maximum latitude for a distribution
-    latUpperBound = 90
-    // Minimum latitude for a distribution
-    latLowerBound = -90
-    // peak of a distribution
-    latPeak = 0
-    // maximum variation of these latitudes (variation is by game seed)
-    latVariability = 0
-    // Falloff for latitude, can be Linear or None
-    latFalloffType = None
-  }
-}
-
-SPACEDUST_RESOURCE:NEEDS[SpaceDust&GU/_Systems/_TauCeti]
-{
-  resourceName = Oxidizer
-  body = Mare
-  
-  RESOURCEBAND
-  {
-    name = mareAtmo
-    // Localized Names
-    title = #LOC_SpaceDust_Band_Atmosphere
-      
-    // Discoverability Data
-    // --------------
-    alwaysDiscovered = false
-    alwaysIdentified = false
-
-    // Abundance Data
-    // --------------
-    // Maximum and minimum abundances (variation is by game seed)
-    // In t/m^3
-    minAbundance = 0.000226
-    maxAbundance = 0.000356
-
-
-    // Scale abundances by air density
-    useAirDensity = True
-    // Map air density to scaling factors
-    densityCurve
-    {
-        key = 0 0
-        key = 1 1
-        key = 12 12
-    }
-
-    // Distribution Data
-    // --------------
-
-    // Distribution model to use, can be Uniform or Spherical
-    distributionType = Spherical
-
-    // These parameters are specific to the Spherical model
-    // -------
-    // Altitudes are in km from sea level
-    // Maximum altitude for a distribution
-    altUpperBound = 55000
-    // minimum altitude for a distribution
-    altLowerBound = -500
-    // peak of a distribution
-    altPeak = 0
-    // maximum variation of these altitudes (variation is by game seed)
-    altVariability = 0
-    // Falloff for altitude, can be Linear or None
-    altFalloffType = Linear
-
-    // lats in degrees
-    // Maximum latitude for a distribution
-    latUpperBound = 90
-    // Minimum latitude for a distribution
-    latLowerBound = -90
-    // peak of a distribution
-    latPeak = 0
-    // maximum variation of these latitudes (variation is by game seed)
-    latVariability = 0
-    // Falloff for latitude, can be Linear or None
-    latFalloffType = None
-  }
 }
 
 SPACEDUST_RESOURCE:NEEDS[SpaceDust&GU/_Systems/_TauCeti]
 {
   resourceName = ArgonGas
-  body = Mare
+  body = Liolan
   
   RESOURCEBAND
   {
-    name = mareAtmo
+    name = liolanAtmo
     title = #LOC_SpaceDust_Band_Atmosphere
       
     // Discoverability Data
@@ -384,12 +203,16 @@ SPACEDUST_RESOURCE:NEEDS[SpaceDust&GU/_Systems/_TauCeti]
     alwaysDiscovered = false
     alwaysIdentified = false
 
+    // The lower this number, the longer the band will take to discover with a Remote telescope
+    remoteDiscoveryScale = 0.75
+
     // Abundance Data
     // --------------
     // Maximum and minimum abundances (variation is by game seed)
     // In t/m^3
-    minAbundance = 0.0000691
-    maxAbundance = 0.0000727
+    minAbundance = 0.000000532
+    maxAbundance = 0.000000932
+
 
     // Scale abundances by air density
     useAirDensity = True
@@ -411,11 +234,160 @@ SPACEDUST_RESOURCE:NEEDS[SpaceDust&GU/_Systems/_TauCeti]
     // -------
     // Altitudes are in km from sea level
     // Maximum altitude for a distribution
-    altUpperBound = 50000
+    altUpperBound = 160000
     // minimum altitude for a distribution
     altLowerBound = -500
     // peak of a distribution
     altPeak = 0
+    // maximum variation of these altitudes (variation is by game seed)
+    altVariability = 0
+    // Falloff for altitude, can be Linear or None
+    altFalloffType = Linear
+
+    // lats in degrees
+    // Maximum latitude for a distribution
+    latUpperBound = 90
+    // Minimum latitude for a distribution
+    latLowerBound = -90
+    // peak of a distribution
+    latPeak = 0
+    // maximum variation of these latitudes (variation is by game seed)
+    latVariability = 0
+    // Falloff for latitude, can be Linear or None
+    latFalloffType = None
+  }
+}
+
+SPACEDUST_RESOURCE:NEEDS[SpaceDust&GU/_Systems/_TauCeti]
+{
+	resourceName = LiquidFuel
+	body = Liolan
+	RESOURCEBAND
+	{
+		name = liolanAtmo
+		title = #LOC_SpaceDust_Band_LowAtmosphere
+		minAbundance = 0.000009
+		maxAbundance = 0.000018
+		alwaysDiscovered = false
+		alwaysIdentified = false
+		remoteDiscoveryScale = 0.2
+		useAirDensity = True
+		densityCurve
+		{
+			key = 0 0
+			key = 1 1
+			key = 12 12
+		}
+		distributionType = Spherical
+		altUpperBound = 150000
+		altLowerBound = 0
+		altPeak = 0
+		altVariability = 1
+		altFalloffType = Linear
+		latUpperBound = 90
+		latLowerBound = -90
+		latPeak = 0
+		latVariability = 0
+		latFalloffType = None
+	}
+}
+
+SPACEDUST_RESOURCE:NEEDS[SpaceDust&GU/_Systems/_TauCeti]
+{
+  resourceName = LqdHydrogen
+  body = Liolan
+
+
+  RESOURCEBAND
+  {
+    name = liolanAtmo
+    title = #LOC_SpaceDust_Band_Atmosphere
+
+    // Maximum and minimum abundances (variation is by game seed)
+    // In t/m^3
+    minAbundance = 0.000047
+    maxAbundance = 0.000059
+
+    // Discoverability Data
+    // --------------
+    alwaysDiscovered = true
+    alwaysIdentified = false
+
+    // The lower this number, the longer the band will take to discover with a Remote telescope
+    remoteDiscoveryScale = 1.0
+
+    
+    // Scale abundances by air density
+    useAirDensity = True
+    // Map air density to scaling factors
+    densityCurve
+    {
+        key = 0 0
+        key = 1 1
+        key = 12 12
+    }
+    // Distribution model to use, can be Uniform or Spherical
+    distributionType = Spherical
+
+    // These parameters are specific to the Spherical model
+    // -------
+    // Altitudes are in km from sea level
+    // Maximum altitude for a distribution
+    altUpperBound = 150000
+    // minimum altitude for a distribution
+    altLowerBound = 0
+    // peak of a distribution
+    altPeak = 0
+    // maximum variation of these altitudes (variation is by game seed)
+    altVariability = 0
+    // Falloff for altitude, can be Linear or None
+    altFalloffType = Linear
+
+    // lats in degrees
+    // Maximum latitude for a distribution
+    latUpperBound = 90
+    // Minimum latitude for a distribution
+    latLowerBound = -90
+    // peak of a distribution
+    latPeak = 0
+    // maximum variation of these latitudes (variation is by game seed)
+    latVariability = 0
+    // Falloff for latitude, can be Linear or None
+    latFalloffType = None
+  }
+
+
+  RESOURCEBAND
+  {
+    name = liolanExo
+    title = #LOC_SpaceDust_Band_Exosphere
+
+    // Maximum and minimum abundances (variation is by game seed)
+    // In t/m^3
+    minAbundance = 0.000000000000000000005105
+    maxAbundance = 0.000000000000000000006005
+
+
+    
+    // Discoverability Data
+    // --------------
+    alwaysDiscovered = false
+    alwaysIdentified = false
+
+    // Scale abundances by air density
+    useAirDensity = False
+    // Distribution model to use, can be Uniform or Spherical
+    distributionType = Spherical
+
+    // These parameters are specific to the Spherical model
+    // -------
+    // Altitudes are in km from sea level
+    // Maximum altitude for a distribution
+    altUpperBound = 2000000000
+    // minimum altitude for a distribution
+    altLowerBound = 150000
+    // peak of a distribution
+    altPeak = 200000
     // maximum variation of these altitudes (variation is by game seed)
     altVariability = 0
     // Falloff for altitude, can be Linear or None
