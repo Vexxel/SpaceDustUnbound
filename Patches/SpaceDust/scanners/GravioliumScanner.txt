@@ -16,23 +16,3 @@
 		}
 	}
 }
-
-//If no FFT, use the gravioli detector instead
-@PART[sensorGravimeter]:AFTER[SpaceDust]:NEEDS[!FarFutureTechnologies]
-{
-	MODULE:NEEDS[Blueshift]
-	{
-		name = ModuleSpaceDustScanner
-		PowerCost = 5
-		
-		SCANNED_RESOURCE
-		{
-			name = Graviolium
-			DiscoverMode = SOI
-			IdentifyMode = Altitude
-			DiscoverRange = 0
-			IdentifyRange = 100000
-		}
-    
-	}
-}
